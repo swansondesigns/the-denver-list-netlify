@@ -5,74 +5,234 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>TDL Mobile</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@6.2.7/dist/simplebar.min.css">
 	<link rel="stylesheet" href="./dist/css/style.css">
-	<script src="./dist/js/app.bundle.js"></script>
+
+	<script src="https://kit.fontawesome.com/a6de6d5d57.js" crossorigin="anonymous" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/simplebar@6.2.7/dist/simplebar.min.js" defer></script>
+	<script src="./dist/js/app.bundle.js" defer></script>
 </head>
 
 <body>
-	<div class="h-full grid lg:grid-cols-[auto,7fr] xl:grid-cols-[auto,3fr,7fr]" style="height:100dvh">
+	<div class="flex flex-col lg:grid lg:grid-cols-[auto,7fr] xl:grid-cols-[auto,3fr,7fr]" style="height:100dvh">
 		<!-- Left Column (Full Height) -->
-		<div
-			class="w-28 py-4 h-full flex-col gap-4 overflow-hidden border-r border-cyan-900 border-opacity-20 hidden lg:flex">
-			<nav class="px-4">
-				<ul role="list" class="filter-list flex flex-col space-y-1" data-filters-container>
+		<div class="relative h-full">
 
-				</ul>
-			</nav>
-			<nav class="mt-auto px-4 pt-4 border-t-4 border-cyan-700 border-dotted border-opacity-35 ">
-				<ul role="list" class="flex flex-col space-y-1">
-					<li>
-						<button class="favorites-toggle grid place-items-center w-full group rounded-md p-3 text-sm leading-6
-	                       bg-gray-800 text-white 
-	                       transition duration-150 ease-in-out 
-	                       transform hover:bg-cyan-800 hover:text-white 
-	                       active:scale-95 active:bg-cyan-900" data-favorites-toggle>
-							<i class="fa-thin fa-2x row-start-1 col-start-1 fa-heart" aria-hidden="true"
-								data-filter-icon-default=""></i>
-							<i class="fa-solid fa-2x row-start-1 col-start-1 fa-heart opacity-0 transition-opacity duration-150 ease-in-out text-pink-600"
-								aria-hidden="true" data-filter-icon-active=""></i>
-							<span class="sr-only">Favorites</span>
-						</button>
-					</li>
-					<li>
-						<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
-	                       bg-gray-800 text-white 
-	                       transition duration-150 ease-in-out 
-	                       transform hover:bg-cyan-800 hover:text-white 
-	                       active:scale-95 active:bg-cyan-900" data-add-location>
-							<i class="fa-thin fa-2x row-start-1 col-start-1 fa-plus" aria-hidden="true"></i>
-							<span class="sr-only">Add Location</span>
-						</button>
-					</li>
-				</ul>
-			</nav>
-		</div>
-		<div class="h-full flex-col overflow-hidden hidden xl:flex">
-			<div class="sidebar-inner h-full" data-simplebar>
-				<div class="m-4 rounded-xl mb-32 bg-white">
-					<p class="p-4 text-sm text-gray-500 hidden" data-zoom-message>Zoom in to get a list of places.</p>
-					<div class="places-list-container pt-4 pb-8" data-place-list-container></div>
+			<div class="absolute z-50 w-28 py-4 h-full flex flex-col gap-4 overflow-hidden bg-white border-r shadow-xl border-cyan-900 border-opacity-20 lg:shadow-none lg:flex"
+				data-filters>
+				<nav class="px-4">
+					<ul role="list" class="filter-list flex flex-col space-y-1" data-filters-container>
+						<li class="relative" data-filter="8" style="transition-delay: 0s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-bagel" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-bagel"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Bakery</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="10" style="transition-delay: 0.1s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-egg-fried" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-egg-fried"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Breakfast</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="11" style="transition-delay: 0.2s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-champagne-glass" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-champagne-glass"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Brunch</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="7" style="transition-delay: 0.3s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-coffee-bean" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-coffee-bean"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Coffee</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="9" style="transition-delay: 0.4s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-ice-cream" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-ice-cream"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Dessert</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="16" style="transition-delay: 0.5s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-fork-knife" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-fork-knife"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Dinner</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="6" style="transition-delay: 0.6s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-martini-glass" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-martini-glass"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Drinks</span>
+							</button>
+						</li>
+
+						<li class="relative" data-filter="15" style="transition-delay: 0.7s;">
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+                       bg-gray-800 text-white 
+                       transition duration-150 ease-in-out 
+                       transform hover:bg-cyan-800 hover:text-white 
+                       active:scale-95 active:bg-cyan-900">
+								<!-- Thin icon shown by default -->
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-sandwich" aria-hidden="true"
+									data-filter-icon-default=""></i>
+
+								<!-- Duotone icon shown on hover and active state -->
+								<i class="fa-duotone fa-2x fa-solid row-start-1 col-start-1 opacity-0 transition-opacity duration-150 ease-in-out fa-sandwich"
+									aria-hidden="true" data-filter-icon-active=""></i>
+
+								<span class="sr-only">Lunch</span>
+							</button>
+						</li>
+					</ul>
+				</nav>
+				<nav class="mt-auto px-4 pt-4 border-t-4 border-cyan-700 border-dotted border-opacity-35 ">
+					<ul role="list" class="flex flex-col space-y-1">
+						<li>
+							<button class="favorites-toggle grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+								bg-gray-800 text-white 
+								transition duration-150 ease-in-out 
+								transform hover:bg-cyan-800 hover:text-white 
+								active:scale-95 active:bg-cyan-900" data-favorites-toggle>
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-heart" aria-hidden="true"
+									data-filter-icon-default=""></i>
+								<i class="fa-solid fa-2x row-start-1 col-start-1 fa-heart opacity-0 transition-opacity duration-150 ease-in-out text-pink-600"
+									aria-hidden="true" data-filter-icon-active=""></i>
+								<span class="sr-only">Favorites</span>
+							</button>
+						</li>
+						<li>
+							<button class="grid place-items-center w-full group rounded-md p-3 text-sm leading-6
+								bg-gray-800 text-white 
+								transition duration-150 ease-in-out 
+								transform hover:bg-cyan-800 hover:text-white 
+								active:scale-95 active:bg-cyan-900" data-add-location>
+								<i class="fa-thin fa-2x row-start-1 col-start-1 fa-plus" aria-hidden="true"></i>
+								<span class="sr-only">Add Location</span>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="h-full flex-col overflow-hidden hidden xl:flex">
+				<div class="sidebar-inner h-full" data-simplebar>
+					<div class="m-4 rounded-xl mb-32 bg-white">
+						<p class="p-4 text-sm text-gray-500 hidden" data-zoom-message>Zoom in to get a list of places.
+						</p>
+						<div class="places-list-container pt-4 pb-8" data-place-list-container></div>
+					</div>
+				</div>
+			</div>
+			<div class="h-full flex flex-col flex-grow relative">
+				<div class="flex-1 p-4 z-10 relative">
+					<div id="map"
+						class="h-full w-full rounded-3xl relative z-20 border border-1 bg-white border-cyan-900 border-opacity-50">
+					</div>
+					<div class="absolute h-full w-full z-0 bg-white top-0 left-0">
+
+						<svg class="absolute h-full w-full stroke-gray-900 opacity-5" fill="none">
+							<defs>
+								<pattern id="diagonal-lines" x="0" y="0" width="10" height="10"
+									patternUnits="userSpaceOnUse">
+									<path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
+								</pattern>
+							</defs>
+							<rect stroke="none" fill="url(#diagonal-lines)" width="100%" height="100%"></rect>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="flex flex-col relative">
-			<div class="flex-1 p-4 z-10 relative">
-				<div id="map"
-					class="h-full w-full rounded-3xl relative z-20 border border-1 border-cyan-900 border-opacity-50">
-				</div>
-				<div class="absolute h-full w-full z-0 bg-white top-0 left-0">
-
-					<svg class="absolute h-full w-full stroke-gray-900 opacity-5" fill="none">
-						<defs>
-							<pattern id="diagonal-lines" x="0" y="0" width="10" height="10"
-								patternUnits="userSpaceOnUse">
-								<path d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"></path>
-							</pattern>
-						</defs>
-						<rect stroke="none" fill="url(#diagonal-lines)" width="100%" height="100%"></rect>
-					</svg>
-				</div>
-			</div>
+		<div class="border-t border-cyan-800 p-2 h-16 flex gap-2" data-mobile-nav>
+			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+					class="fa-solid fa-filter"></i></button>
+			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+					class="fa-solid fa-bars"></i></button>
+			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+					class="fa-solid fa-gear"></i></button>
+			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+					class="fa-solid fa-info"></i></button>
 		</div>
 	</div>
 </body>
