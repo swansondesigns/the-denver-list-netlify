@@ -1,3 +1,517 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/.pnpm/css-loader@7.1.2_webpack@5.97.1/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/postcss-loader@8.1.1_postcss@8.5.1_webpack@5.97.1/node_modules/postcss-loader/dist/cjs.js!./node_modules/.pnpm/sass-loader@16.0.4_sass@1.83.4_webpack@5.97.1/node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* style.scss */
+/* clusters.scss */
+.marker-cluster {
+  transition: background-color 0.3s;
+  background-color: rgba(34, 211, 238, 0.6);
+}
+.marker-cluster > div {
+  background-color: rgba(34, 211, 238, 0.8);
+}
+.marker-cluster.marker-cluster-medium {
+  background-color: rgba(8, 145, 178, 0.6);
+}
+.marker-cluster.marker-cluster-medium > div {
+  background-color: rgba(8, 145, 178, 0.8);
+}
+.marker-cluster.marker-cluster-large {
+  background-color: rgba(21, 94, 117, 0.6);
+}
+.marker-cluster.marker-cluster-large > div {
+  background-color: rgba(21, 94, 117, 0.8);
+}
+.marker-cluster.active {
+  background-color: rgba(234, 88, 12, 0.6);
+}
+.marker-cluster.active > div {
+  background-color: rgba(234, 88, 12, 0.8);
+}
+.marker-cluster.highlighted {
+  background-color: rgba(22, 163, 74, 0.6);
+}
+.marker-cluster.highlighted > div {
+  background-color: rgba(22, 163, 74, 0.8);
+}
+
+/* modal.scss */
+.edit-modal[open] {
+  display: flex;
+  flex-direction: column;
+}
+.edit-modal .close-btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity, 1));
+}
+.edit-modal .acf-form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.edit-modal .acf-form .acf-fields {
+  flex: 1 1 0%;
+  overflow-y: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+}
+.edit-modal .acf-form .acf-field {
+  display: flex;
+  flex-direction: column;
+}
+.edit-modal .acf-form .acf-field > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.edit-modal .acf-form .acf-field .acf-label label {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+.edit-modal .acf-form .acf-field .acf-input input,
+.edit-modal .acf-form .acf-field .acf-input textarea,
+.edit-modal .acf-form .acf-field .acf-input select {
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  padding: 0.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.edit-modal .acf-form .acf-field .acf-input input:focus,
+.edit-modal .acf-form .acf-field .acf-input textarea:focus,
+.edit-modal .acf-form .acf-field .acf-input select:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
+}
+.edit-modal .acf-form .acf-field .acf-input input[type=checkbox],
+.edit-modal .acf-form .acf-field .acf-input input[type=radio] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(8 145 178 / var(--tw-text-opacity, 1));
+}
+.edit-modal .acf-form .acf-field .acf-input input[type=checkbox]:focus,
+.edit-modal .acf-form .acf-field .acf-input input[type=radio]:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
+}
+.edit-modal .acf-form .acf-field .acf-input .acf-url input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  padding: 0.75rem;
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.edit-modal .acf-form .acf-field .acf-input .acf-url input:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity, 1));
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity, 1));
+}
+.edit-modal .acf-form .acf-field .acf-input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.edit-modal .acf-form .acf-field .acf-field-group .acf-fields {
+  border-radius: 0.5rem;
+  border-width: 1px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+  padding: 1rem;
+}
+.edit-modal .acf-form .acf-field .acf-field-group .acf-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.edit-modal .acf-form .acf-field p.description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.edit-modal .acf-form .acf-form-submit {
+  position: sticky;
+  bottom: 0px;
+  z-index: 10;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+.edit-modal .acf-form .acf-form-submit input[type=submit] {
+  height: 3rem;
+  width: 100%;
+  cursor: pointer;
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 94 117 / var(--tw-bg-opacity, 1));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.edit-modal .acf-form .acf-form-submit input[type=submit]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 116 144 / var(--tw-bg-opacity, 1));
+}
+.edit-modal .acf-form .acf-form-submit input[type=submit]:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(6 182 212 / var(--tw-ring-opacity, 1));
+  --tw-ring-offset-width: 2px;
+}
+
+/* lists.scss */
+.places-list-container ul li {
+  transition: background-color 0.4s;
+}
+.places-list-container ul li.highlighted {
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 250 254 / var(--tw-bg-opacity, 1));
+}
+.places-list-container ul li.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 243 252 / var(--tw-bg-opacity, 1));
+}
+.places-list-container ul li.active span.marker-cluster {
+  background-color: rgba(234, 88, 12, 0.6);
+}
+.places-list-container ul li.active span.marker-cluster > span {
+  background-color: rgba(234, 88, 12, 0.8);
+}
+.places-list-container ul li.clustered .list-item-details::before {
+  content: "";
+  height: 190%;
+  position: absolute;
+  width: 1px;
+  bottom: 50%;
+  right: 0.5rem;
+  border-left: 1px dashed gray;
+  z-index: 0;
+}
+.places-list-container ul li.clustered.first .list-item-details::before {
+  content: none;
+}
+.places-list-container ul li.clustered.highlighted .marker-cluster {
+  background-color: rgba(22, 163, 74, 0.6);
+}
+.places-list-container ul li.clustered.highlighted .marker-cluster > span {
+  background-color: rgba(22, 163, 74, 0.8);
+}
+.places-list-container ul li .cluster-size-small {
+  background-color: rgba(34, 211, 238, 0.6);
+}
+.places-list-container ul li .cluster-size-small > span {
+  background-color: rgba(34, 211, 238, 0.8);
+}
+.places-list-container ul li .cluster-size-medium {
+  background-color: rgba(8, 145, 178, 0.6);
+}
+.places-list-container ul li .cluster-size-medium > span {
+  background-color: rgba(8, 145, 178, 0.8);
+}
+.places-list-container ul li .cluster-size-large {
+  background-color: rgba(21, 94, 117, 0.6);
+}
+.places-list-container ul li .cluster-size-large > span {
+  background-color: rgba(21, 94, 117, 0.8);
+}
+
+.sidebar-inner {
+  background: linear-gradient(344deg, #083344 0%, #0e7490 79%, #083344 100%);
+}
+.sidebar-inner .simplebar-scrollbar::before {
+  --tw-bg-opacity: 1;
+  background-color: rgb(103 232 249 / var(--tw-bg-opacity, 1));
+}
+.sidebar-inner .simplebar-scrollbar:hover::before {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity, 1));
+}
+
+ul.filter-list [data-filter] .fa-thin {
+  opacity: 1;
+  transition: opacity 0.15s ease-in-out;
+}
+ul.filter-list [data-filter] .fa-duotone {
+  opacity: 0;
+}
+ul.filter-list [data-filter] button:hover .fa-thin {
+  opacity: 0;
+}
+ul.filter-list [data-filter] button:hover .fa-duotone {
+  opacity: 1;
+}
+ul.filter-list [data-filter] button.active .fa-thin {
+  opacity: 0;
+}
+ul.filter-list [data-filter] button.active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 145 178 / var(--tw-bg-opacity, 1));
+}
+ul.filter-list [data-filter] button.active .fa-duotone {
+  opacity: 1;
+  --tw-text-opacity: 1;
+  color: rgb(207 250 254 / var(--tw-text-opacity, 1));
+}
+ul.filter-list li {
+  transition: right 0.5s;
+}
+ul.filter-list.initialized li {
+  right: 0;
+}
+
+button.favorites-toggle[data-favorites-toggle=on] [data-filter-icon-default] {
+  opacity: 0;
+}
+button.favorites-toggle[data-favorites-toggle=on] [data-filter-icon-active] {
+  opacity: 1;
+}
+
+/* markers.scss */
+.leaflet-div-icon {
+  background: transparent;
+  border: 0;
+}
+
+.leaflet-container .leaflet-popup-content-wrapper {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  padding: 0px;
+}
+.leaflet-container .leaflet-popup-content-wrapper .leaflet-popup-content {
+  margin: 0px;
+}
+.leaflet-container a.leaflet-popup-close-button {
+  transform: translate(50%, -50%);
+  display: grid;
+  width: 1rem;
+  height: 1rem;
+  place-content: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity, 1));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.custom-marker-wrapper {
+  transition: transform 0.3s;
+}
+.custom-marker-wrapper i {
+  padding: 2px;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  aspect-ratio: 1/1;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  --tw-text-opacity: 1;
+  color: rgb(21 94 117 / var(--tw-text-opacity, 1));
+}
+.custom-marker-wrapper i:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.custom-marker-wrapper svg path.marker-body {
+  fill: url(#default-gradient);
+  stroke: url(#default-stroke);
+  transition: fill 0.2s ease;
+}
+.custom-marker-wrapper .spotlight {
+  background: radial-gradient(circle, rgba(8, 51, 68, 0.75) 0%, rgba(8, 145, 178, 0.75) 50%, rgba(8, 51, 68, 0.75) 100%);
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  height: 0;
+  pointer-events: none;
+  transition: height 0.2s ease-out;
+}
+.custom-marker-wrapper.active .spotlight {
+  animation: spotlightExpand 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 150%;
+}
+.custom-marker-wrapper.active svg path.marker-body {
+  fill: url(#active-gradient);
+  stroke: url(#active-stroke);
+}
+.custom-marker-wrapper.highlighted {
+  transform: scale(1.5);
+}
+.custom-marker-wrapper.highlighted:hover {
+  transform: scale(1);
+}
+.custom-marker-wrapper.highlighted:hover svg path.marker-body {
+  fill: url(#active-gradient);
+  stroke: url(#active-stroke);
+}
+.custom-marker-wrapper.favorited i {
+  color: white;
+  background-color: #9d174d;
+}
+.custom-marker-wrapper.flip .marker-label {
+  left: auto;
+  right: 100%;
+  justify-content: flex-end;
+  padding-left: 0px;
+  padding-right: 0.25rem;
+  text-align: right;
+}
+.custom-marker-wrapper .marker-label {
+  position: absolute;
+  left: 100%;
+  display: flex;
+  min-height: 1.75rem;
+  min-width: 6rem;
+  align-items: center;
+  padding-left: 0.25rem;
+  font-weight: 700;
+  line-height: .75rem;
+  --tw-text-opacity: 1;
+  color: rgb(8 51 68 / var(--tw-text-opacity, 1));
+  text-shadow: 0 0 4px white;
+}
+
+/* Keyframes for spotlight expansion */
+@keyframes spotlightExpand {
+  0% {
+    height: 0;
+  }
+  60% {
+    height: 170%;
+  }
+  100% {
+    height: 150%;
+  }
+}
+form.acf-form .acf-fields > .acf-field {
+  border-width: 0px;
+  padding: 1rem;
+}
+form.acf-form .acf-fields > .acf-field[data-name=map] .acf-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+form.acf-form .acf-form-submit input {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 94 117 / var(--tw-bg-opacity, 1));
+  padding: 1rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.response-message {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+.response-message .message-dismiss-button {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+.response-message .message-dismiss-button:hover {
+  background-color: #bee3f8;
+}
+.response-message.message-success {
+  background-color: #f0fff4;
+  color: #38a169;
+}
+.response-message.message-success .message-icon-success {
+  display: block;
+}
+.response-message.message-success .message-icon-info,
+.response-message.message-success .message-icon-error {
+  display: none;
+}
+.response-message.message-success .message-dismiss-button {
+  background-color: #f0fff4;
+  color: #38a169;
+}
+.response-message.message-success .message-dismiss-button:hover {
+  background-color: #c6f6d5;
+}
+.response-message.message-error {
+  background-color: #fff5f5;
+  color: #e53e3e;
+}
+.response-message.message-error .message-icon-error {
+  display: block;
+}
+.response-message.message-error .message-icon-info,
+.response-message.message-error .message-icon-success {
+  display: none;
+}
+.response-message.message-error .message-dismiss-button {
+  background-color: #fff5f5;
+  color: #e53e3e;
+}
+.response-message.message-error .message-dismiss-button:hover {
+  background-color: #fed7d7;
+}
+
+.app-filters {
+  transform: translateX(0%);
+  transition: transform 0.3s;
+}
+.app-filters.active {
+  transform: translateX(100%);
+}
+
+body {
+  overflow: hidden;
+  height: 100vh; /* Fallback for browsers without dvh or custom properties */
+  height: 100dvh; /* Use dynamic viewport height if supported */
+}
 /*!******************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/.pnpm/css-loader@7.1.2_webpack@5.97.1/node_modules/css-loader/dist/cjs.js!./node_modules/.pnpm/postcss-loader@8.1.1_postcss@8.5.1_webpack@5.97.1/node_modules/postcss-loader/dist/cjs.js!./src/css/tailwind.css ***!
   \******************************************************************************************************************************************************************************************************************************************/
@@ -605,6 +1119,34 @@ select {
   outline: 1px solid ButtonText;
   outline: 1px auto -webkit-focus-ring-color;
 }
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -625,11 +1167,11 @@ select {
 .left-0 {
   left: 0px;
 }
+.right-full {
+  right: 100%;
+}
 .top-0 {
   top: 0px;
-}
-.right-28 {
-  right: 7rem;
 }
 .z-0 {
   z-index: 0;
@@ -661,9 +1203,6 @@ select {
 .block {
   display: block;
 }
-.inline-block {
-  display: inline-block;
-}
 .flex {
   display: flex;
 }
@@ -673,14 +1212,11 @@ select {
 .hidden {
   display: none;
 }
-.h-full {
-  height: 100%;
-}
-.h-14 {
-  height: 3.5rem;
-}
 .h-16 {
   height: 4rem;
+}
+.h-full {
+  height: 100%;
 }
 .w-28 {
   width: 7rem;
@@ -700,17 +1236,14 @@ select {
 .flex-col {
   flex-direction: column;
 }
-.place-content-center {
-  place-content: center;
-}
 .place-items-center {
   place-items: center;
 }
-.gap-4 {
-  gap: 1rem;
-}
 .gap-2 {
   gap: 0.5rem;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
@@ -765,6 +1298,10 @@ select {
 .border-opacity-50 {
   --tw-border-opacity: 0.5;
 }
+.bg-cyan-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 78 99 / var(--tw-bg-opacity, 1));
+}
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
@@ -773,24 +1310,17 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
-.bg-cyan-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 78 99 / var(--tw-bg-opacity, 1));
-}
 .stroke-gray-900 {
   stroke: #111827;
+}
+.p-2 {
+  padding: 0.5rem;
 }
 .p-3 {
   padding: 0.75rem;
 }
 .p-4 {
   padding: 1rem;
-}
-.p-8 {
-  padding: 2rem;
-}
-.p-2 {
-  padding: 0.5rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -830,11 +1360,6 @@ select {
 }
 .opacity-5 {
   opacity: 0.05;
-}
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-xl {
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);

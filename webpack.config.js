@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 export default {
 	entry: {
-		style: ['./src/css/tailwind.css'],
+		style: ['./src/sass/style.scss', './src/css/tailwind.css'],
 		app: './src/js/app.js', // Single JS entry point
 	},
 	output: {

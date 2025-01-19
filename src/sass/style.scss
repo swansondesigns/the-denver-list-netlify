@@ -8,11 +8,10 @@
 @import 'markers';
 @import 'create';
 @import 'message-center';
+@import 'navigation';
 
 body {
-    overflow: hidden;
-    height: 100vh; /* Fallback for browsers without dvh or custom properties */
+	overflow: hidden;
+	height: 100vh; /* Fallback for browsers without dvh or custom properties */
 	height: 100dvh; /* Use dynamic viewport height if supported */
-	height: var(--vh); /* Use the full height directly from JavaScript */
-
 }

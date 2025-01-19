@@ -14,11 +14,12 @@
 </head>
 
 <body>
+
 	<div class="flex flex-col lg:grid lg:grid-cols-[auto,7fr] xl:grid-cols-[auto,3fr,7fr]" style="height:100dvh">
 		<!-- Left Column (Full Height) -->
 		<div class="relative h-full">
 
-			<div class="absolute z-50 w-28 py-4 h-full flex flex-col gap-4 overflow-hidden bg-white border-r shadow-xl border-cyan-900 border-opacity-20 lg:shadow-none lg:flex"
+			<div class="app-filters absolute right-full z-50 w-28 py-4 h-full flex flex-col gap-4 overflow-hidden bg-white border-r shadow-xl border-cyan-900 border-opacity-20 lg:shadow-none lg:flex"
 				data-filters>
 				<nav class="px-4">
 					<ul role="list" class="filter-list flex flex-col space-y-1" data-filters-container>
@@ -225,13 +226,13 @@
 			</div>
 		</div>
 		<div class="border-t border-cyan-800 p-2 h-16 flex gap-2" data-mobile-nav>
-			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+			<button class="text-white bg-cyan-900 block rounded-md w-full" data-mobile-button="filters"><i
 					class="fa-solid fa-filter"></i></button>
-			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
-					class="fa-solid fa-bars"></i></button>
-			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+			<button class="text-white bg-cyan-900 block rounded-md w-full" data-mobile-button="menu"><i
+					class="fa-solid fa-list"></i></button>
+			<button class="text-white bg-cyan-900 block rounded-md w-full" data-mobile-button="settings"><i
 					class="fa-solid fa-gear"></i></button>
-			<button class="text-white bg-cyan-900 block rounded-md w-full" aria><i
+			<button class="text-white bg-cyan-900 block rounded-md w-full" data-mobile-button="into"><i
 					class="fa-solid fa-info"></i></button>
 		</div>
 	</div>

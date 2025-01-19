@@ -1,0 +1,7 @@
+.app-filters {
+	transform: translateX(0%);
+	transition: transform 0.3s;
+	&.active {
+		transform: translateX(100%);
+	}
+}
