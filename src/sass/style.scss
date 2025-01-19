@@ -1,0 +1,18 @@
+/* style.scss */
+
+@import 'variables';
+@import 'clusters';
+@import 'modal';
+@import 'place-list';
+@import 'filters';
+@import 'markers';
+@import 'create';
+@import 'message-center';
+
+body {
+    overflow: hidden;
+    height: 100vh; /* Fallback for browsers without dvh or custom properties */
+	height: 100dvh; /* Use dynamic viewport height if supported */
+	height: var(--vh); /* Use the full height directly from JavaScript */
+
+}

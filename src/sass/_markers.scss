@@ -1,0 +1,122 @@
+/* markers.scss */
+
+.leaflet-div-icon {
+    background: transparent;
+    border: 0;
+}
+
+.leaflet-container {
+
+	
+	.leaflet-popup-content-wrapper {
+		@apply p-0 rounded-lg overflow-hidden;
+		.leaflet-popup-content {
+			@apply m-0;
+		}
+	}
+	a.leaflet-popup-close-button {
+		transform: translate(50%, -50%);
+		@apply size-4 bg-red-900 text-white grid place-content-center rounded-full;
+	}
+}
+
+.custom-marker-wrapper {
+	transition: transform .3s;
+    i {
+        padding: 2px;
+        top: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        aspect-ratio: 1/1;
+        position: absolute;
+        border-radius: 50%;
+        background-color: white;
+        @apply text-cyan-800;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    svg path.marker-body {
+        fill: url(#default-gradient);
+        stroke: url(#default-stroke);
+        transition: fill 0.2s ease;
+    }
+
+    .spotlight {
+        background: radial-gradient(circle, rgba(8,51,68,.75) 0%, rgba(8,145,178,.75) 50%, rgba(8,51,68,.75) 100%);
+        position: absolute;
+        z-index: -1;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        height: 0;
+        pointer-events: none;
+        transition: height 0.2s ease-out;
+    }
+
+    &.active .spotlight {
+        animation: spotlightExpand 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 150%;
+    }
+
+    &.active svg path.marker-body {
+        fill: url(#active-gradient);
+        stroke: url(#active-stroke);
+    }
+
+	// &.highlighted {
+	// 	transform: scale(1.3);
+	// 	// .spotlight {
+	// 	// 	background: radial-gradient(circle, rgba(8,51,68,.75) 0%, rgba(8,145,178,.75) 50%, rgba(8,51,68,.75) 100%);
+	// 	// 	animation: spotlightExpand 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	// 	// 	height: 150%;
+	// 	// }
+	// }
+
+	&.highlighted {
+		transform: scale(1.5);
+		&:hover {
+			transform: scale(1);
+			svg path.marker-body {
+				fill: url(#active-gradient);
+				stroke: url(#active-stroke);
+			}
+		}
+	} 
+
+    &.favorited i {
+        color: white;
+        background-color: #9d174d;
+    }
+	&.flip {
+		.marker-label {
+			@apply justify-end left-auto right-full text-right pl-0 pr-1;
+		}
+	}
+
+	.marker-label {
+		@apply  absolute left-full flex items-center pl-1 min-h-7 min-w-24 font-bold leading-3 text-cyan-950;
+		text-shadow: 0 0 4px white;
+	}
+}
+
+/* Keyframes for spotlight expansion */
+@keyframes spotlightExpand {
+    0% {
+        height: 0;
+    }
+    60% {
+        height: 170%;
+    }
+    100% {
+        height: 150%;
+    }
+}

@@ -1,0 +1,60 @@
+.response-message {
+  // Base styles for the message (info is default)
+  background-color: #ebf8ff; // Default info background (light blue)
+  color: #2b6cb0; // Default info text (dark blue)
+
+
+  .message-dismiss-button {
+    background-color: #ebf8ff; // Default info dismiss button background
+    color: #2b6cb0; // Default info dismiss button color
+    &:hover {
+      background-color: #bee3f8; // Lighter blue on hover
+    }
+  }
+
+  // Success variant
+  &.message-success {
+    background-color: #f0fff4; // Light green background
+    color: #38a169; // Green text
+
+    .message-icon-success {
+      display: block; // Show the success icon
+    }
+
+    .message-icon-info,
+    .message-icon-error {
+      display: none; // Hide other icons
+    }
+
+    .message-dismiss-button {
+      background-color: #f0fff4; // Success dismiss button background
+      color: #38a169; // Success dismiss button color
+      &:hover {
+        background-color: #c6f6d5; // Lighter green on hover
+      }
+    }
+  }
+
+  // Error variant
+  &.message-error {
+    background-color: #fff5f5; // Light red background
+    color: #e53e3e; // Red text
+
+    .message-icon-error {
+      display: block; // Show the error icon
+    }
+
+    .message-icon-info,
+    .message-icon-success {
+      display: none; // Hide other icons
+    }
+
+    .message-dismiss-button {
+      background-color: #fff5f5; // Error dismiss button background
+      color: #e53e3e; // Error dismiss button color
+      &:hover {
+        background-color: #fed7d7; // Lighter red on hover
+      }
+    }
+  }
+}

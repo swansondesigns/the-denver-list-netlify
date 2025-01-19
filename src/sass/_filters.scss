@@ -1,0 +1,52 @@
+ul.filter-list {
+    [data-filter] .fa-thin {
+        opacity: 1;
+        transition: opacity 0.15s ease-in-out;
+    }
+
+    [data-filter] .fa-duotone {
+        opacity: 0;
+    }
+
+    [data-filter] button:hover .fa-thin {
+        opacity: 0;
+    }
+
+    [data-filter] button:hover .fa-duotone {
+        opacity: 1;
+    }
+
+    [data-filter] button.active .fa-thin {
+        opacity: 0;
+    }
+
+    [data-filter] button.active {
+        @apply bg-cyan-600;
+
+        .fa-duotone {
+            opacity: 1;
+            @apply text-cyan-100;
+        }
+    }
+
+    li {
+        transition: right .5s;
+    }
+
+    &.initialized {
+        li {
+            right: 0;
+        }
+    }
+}
+
+button.favorites-toggle {
+    &[data-favorites-toggle="on"] {
+        [data-filter-icon-default] {
+            @apply opacity-0;
+        }
+        [data-filter-icon-active] {
+            @apply opacity-100;
+        }
+    }
+}

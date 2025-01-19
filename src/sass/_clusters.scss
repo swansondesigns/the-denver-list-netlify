@@ -1,0 +1,39 @@
+/* clusters.scss */
+
+.marker-cluster {
+    transition: background-color .3s;
+    background-color: rgba($cluster-color, $opacity-outer);
+
+    > div {
+        background-color: rgba($cluster-color, $opacity-inner);
+    }
+
+    &.marker-cluster-medium {
+        background-color: rgba($cluster-color-medium, $opacity-outer);
+        > div {
+            background-color: rgba($cluster-color-medium, $opacity-inner);
+        }
+    }
+
+    &.marker-cluster-large {
+        background-color: rgba($cluster-color-large, $opacity-outer);
+        > div {
+            background-color: rgba($cluster-color-large, $opacity-inner);
+        }
+    }
+	
+    &.active {
+        background-color: rgba($cluster-color-active, $opacity-outer);
+        > div {
+            background-color: rgba($cluster-color-active, $opacity-inner);
+        }
+    }
+
+	
+    &.highlighted {
+        background-color: rgba($cluster-color-highlighted, $opacity-outer);
+        > div {
+            background-color: rgba($cluster-color-highlighted, $opacity-inner);
+        }
+    }
+}

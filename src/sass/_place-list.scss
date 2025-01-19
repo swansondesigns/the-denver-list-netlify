@@ -1,0 +1,78 @@
+/* lists.scss */
+
+.places-list-container {
+    ul li {
+        transition: background-color .4s;
+        
+		&.highlighted {
+            @apply bg-cyan-100;
+        }
+		&.active {
+			@apply bg-cyan-200;
+			span.marker-cluster {
+				background-color: rgba($cluster-color-active, $opacity-outer);
+				> span {
+					background-color: rgba($cluster-color-active, $opacity-inner);
+				}
+			}
+        }
+        
+		&.clustered {
+
+			.list-item-details::before {
+				content: '';
+				height: 190%;
+				position: absolute;
+				width: 1px;
+				bottom: 50%;
+				right: .5rem;
+				border-left: 1px dashed gray;
+				z-index: 0;
+			}
+			&.first .list-item-details::before {
+				content: none;
+			}
+		}
+		&.clustered.highlighted .marker-cluster {
+			background-color: rgba($cluster-color-highlighted, $opacity-outer);
+			> span {
+				background-color: rgba($cluster-color-highlighted, $opacity-inner);
+			}
+		}
+		.cluster-size-small {
+			background-color: rgba($cluster-color, $opacity-outer);
+			> span {
+				background-color: rgba($cluster-color, $opacity-inner);
+			}
+		}
+
+		.cluster-size-medium {
+			background-color: rgba($cluster-color-medium, $opacity-outer);
+			> span {
+				background-color: rgba($cluster-color-medium, $opacity-inner);
+			}
+		}
+
+		.cluster-size-large {
+			background-color: rgba($cluster-color-large, $opacity-outer);
+			> span {
+				background-color: rgba($cluster-color-large, $opacity-inner);
+			}
+		}
+    }
+}
+
+.sidebar-inner {
+    background: linear-gradient(344deg, rgba(#083344, 1) 0%, rgba(#0e7490, 1) 79%, rgba(#083344, 1) 100%);
+
+    .simplebar-scrollbar::before {
+        @apply bg-cyan-300;
+    }
+
+    .simplebar-scrollbar:hover::before {
+        @apply bg-cyan-600;
+    }
+}
+
+
+
